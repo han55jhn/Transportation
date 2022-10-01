@@ -15,7 +15,7 @@
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
     <string name="identification_number">Identification Number</string>
-    <string name="near_by">Near By</string>
+    <string name="near_by">Educational Places</string>
     <string name="city">City</string>
     <string name="school_start_time">School Start Time</string>
     <string name="school_end_time">School End Time</string>

@@ -18,6 +18,7 @@ import com.malik.transportation.databinding.FragmentSignInBinding
 import com.malik.transportation.home.activity.*
 import com.malik.transportation.model.Login
 import com.malik.transportation.model.LoginResponse
+import com.malik.transportation.model.SignupResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -83,52 +84,77 @@ class SignInFragment : Fragment(R.layout.fragment_sign_in) {
                 call: Call<LoginResponse?>,
                 response: Response<LoginResponse?>
             ) {
-                val loginResponse: LoginResponse? = response.body()
-                Log.e("loginResponse", loginResponse!!.role)
-                binding.loading.visibility = View.GONE
-                Log.i("true", loginResponse.toString())
-                val editor: SharedPreferences.Editor =
-                    sharedPreferences.edit()
-                editor.putString(Constants.userId, loginResponse.id.toString())
-                editor.putString(Constants.userRole, loginResponse.role)
-                editor.putBoolean(Constants.isLoggedIn, true)
-                editor.apply()
-                if (loginResponse.role == "admin") {
 
-                    val intent = Intent(requireContext(), AdminHomeActivity::class.java)
-                    startActivity(intent)
-                    requireActivity().finish()
-                }
-                if (loginResponse.role == "institution") {
+                when {
+                    response.isSuccessful -> {
+                        val loginResponse: LoginResponse? = response.body()
+                        Log.e("loginResponse", loginResponse!!.toString())
+                        binding.loading.visibility = View.GONE
+                        Log.i("true", loginResponse.toString())
+                        val editor: SharedPreferences.Editor =
+                            sharedPreferences.edit()
+                        editor.putString(Constants.userId, loginResponse.id.toString())
+                        editor.putString(Constants.userRole, loginResponse.role)
+                        editor.putBoolean(Constants.isLoggedIn, true)
+                        editor.apply()
+                        if (loginResponse.role == "admin") {
 
-                    val intent = Intent(requireContext(), StudentHomeActivity::class.java)
-                    startActivity(intent)
-                    requireActivity().finish()
-                }
-                if (loginResponse.role == "company") {
+                            val intent = Intent(requireContext(), AdminHomeActivity::class.java)
+                            startActivity(intent)
+                            requireActivity().finish()
+                        }
+                        if (loginResponse.role == "institution") {
 
-                    val intent = Intent(requireContext(), CompanyActivity::class.java)
-                    startActivity(intent)
-                    requireActivity().finish()
-                }
-                if (loginResponse.role == "teacher") {
+                            val intent = Intent(requireContext(), StudentHomeActivity::class.java)
+                            startActivity(intent)
+                            requireActivity().finish()
+                        }
+                        if (loginResponse.role == "transportation company") {
 
-                    val intent = Intent(requireContext(), TeacherHomeActivity::class.java)
-                    startActivity(intent)
-                    requireActivity().finish()
-                }
-                if (loginResponse.role == "university student") {
+                            val intent = Intent(requireContext(), CompanyActivity::class.java)
+                            startActivity(intent)
+                            requireActivity().finish()
+                        }
+                        if (loginResponse.role == "teacher") {
 
-                    val intent = Intent(requireContext(), HomeActivity::class.java)
-                    startActivity(intent)
-                    requireActivity().finish()
-                }
-                if (loginResponse.role == "driver") {
+                            val intent = Intent(requireContext(), TeacherHomeActivity::class.java)
+                            startActivity(intent)
+                            requireActivity().finish()
+                        }
+                        if (loginResponse.role == "university student") {
 
-                    val intent = Intent(requireContext(), DriverHomeActivity::class.java)
-                    startActivity(intent)
-                    requireActivity().finish()
+                            val intent = Intent(requireContext(), HomeActivity::class.java)
+                            startActivity(intent)
+                            requireActivity().finish()
+                        }
+                        if (loginResponse.role == "driver") {
+
+                            val intent = Intent(requireContext(), DriverHomeActivity::class.java)
+                            startActivity(intent)
+                            requireActivity().finish()
+                        }
+                    }
+                    response.code() == 422 -> {
+                        binding.loading.visibility = View.GONE
+
+                        Snackbar.make(
+                            binding.root,
+                            "Internal Server Error",
+                            Snackbar.LENGTH_LONG
+                        ).show()
+                    }
+                    else -> {
+                        binding.loading.visibility = View.GONE
+
+                        Snackbar.make(
+                            binding.root,
+                            "Internal Server Error",
+                            Snackbar.LENGTH_LONG
+                        ).show()
+                    }
                 }
+
+
             }
 
             override fun onFailure(call: Call<LoginResponse?>, t: Throwable) {

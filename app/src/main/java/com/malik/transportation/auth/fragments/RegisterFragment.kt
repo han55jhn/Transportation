@@ -59,8 +59,12 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
 
                     }
                     if (selectedType == "Institution") {
+                        val action = RegisterFragmentDirections.actionRegisterFragmentToStudentSchoolDataFragment(
+                            selectedType!!.lowercase(Locale.ROOT),
 
-                        findNavController().navigate(R.id.action_registerFragment_to_studentSchoolDataFragment)
+                            )
+                        findNavController().navigate(action)
+//                        findNavController().navigate(R.id.action_registerFragment_to_studentSchoolDataFragment)
                     }
                     if (selectedType == "Parents") {
 
