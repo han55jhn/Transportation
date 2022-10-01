@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".auth.fragments.PersonalInfoFragment">
+    tools:context=".auth.fragments.driver.DriverInfoFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,6 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -96,56 +97,6 @@
                     android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
-
-
-            <com.tiper.MaterialSpinner
-                android:id="@+id/city_spinner"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="@dimen/_8sdp"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:layout_marginEnd="@dimen/_8sdp"
-                android:focusable="false"
-                android:hint="@string/city"
-                app:spinnerMode="dropdown" />
-
-
-
-            <com.tiper.MaterialSpinner
-                android:id="@+id/near_by_spinner"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="@dimen/_8sdp"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:layout_marginEnd="@dimen/_8sdp"
-                android:focusable="false"
-                android:hint="@string/near_by"
-                app:spinnerMode="dropdown" />
-
-
-            <com.tiper.MaterialSpinner
-                android:id="@+id/registration_type_spinner"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/type_tv"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="@dimen/_8sdp"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:layout_marginEnd="@dimen/_8sdp"
-                android:focusable="false"
-                android:hint="@string/registration_type"
-                app:spinnerMode="dropdown" />
-
-
-
-
-
-
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
@@ -153,38 +104,16 @@
                 android:layout_marginStart="@dimen/_8sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:layout_marginEnd="@dimen/_8sdp"
-                android:hint="@string/school_start_time">
+                android:hint="@string/driving_license_number">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/school_start_time_et"
+                    android:id="@+id/driving_license_number_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/dinregular"
-                    android:focusable="false"
-                    android:focusableInTouchMode="false"
-                    android:inputType="none" />
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_8sdp"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:layout_marginEnd="@dimen/_8sdp"
-                android:hint="@string/school_end_time">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/school_end_time_et"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/dinregular"
-                    android:focusable="false"
-                    android:focusableInTouchMode="false"
-                    android:inputType="none" />
-            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -235,7 +164,11 @@
                 android:text="@string/next_one"
                 android:textColor="@color/white" />
 
+
+
+
         </LinearLayout>
+
 
 
     </ScrollView>

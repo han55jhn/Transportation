@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_8sdp"
+    android:layout_marginTop="@dimen/_4sdp"
+    android:layout_marginEnd="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/_4sdp"
+    app:cardCornerRadius="@dimen/_8sdp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_7_00_am_1_00_pm"
+            android:drawablePadding="@dimen/_8sdp"
+            android:fontFamily="@font/dinregular"
+            android:id="@+id/time_tv"
+            app:drawableStartCompat="@drawable/icon_item" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/_8sdp"
+            android:fontFamily="@font/dinregular"
+            android:layout_below="@id/time_tv"
+            android:text="محمد عبدالله"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:id="@+id/name_tv"
+            android:textColor="@color/blue"
+            app:drawableStartCompat="@drawable/user"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/_8sdp"
+            android:fontFamily="@font/dinregular"
+            android:layout_below="@id/name_tv"
+            android:text="CR-V 2022"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:id="@+id/car_number_tv"
+            android:textColor="@color/purple"
+            app:drawableStartCompat="@drawable/car"/>
+
+
+
+
+        <Button
+            android:id="@+id/res_btn"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@color/light_purple"
+            android:fontFamily="@font/dinregular"
+            android:layout_alignParentEnd="true"
+            android:text="@string/reservation"
+            android:textAllCaps="false"
+           android:textSize="@dimen/_10ssp"
+            android:textColor="@color/white" />
+
+
+
+        <com.baha.reviewbar.ReviewBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:halfEnable="false"
+            app:halfRangeMax="0.7"
+            app:halfRangeMin="0.2"
+            app:iconSpace="0"
+            app:isIndicator="true"
+            android:layout_below="@id/res_btn"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:reviewScore="3"
+            app:reviewScoreMax="5"
+            app:whenDragScoreMin="1.0" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_marginBottom="15dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/icon_item"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/user"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/car"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/dinregular"
+            android:text="7 : 00 صباحا - 1:00 مساء"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="محمد عبدالله"
+            android:fontFamily="@font/dinregular"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:text="هوندا CR-V 2022"
+            android:fontFamily="@font/dinregular"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/reservation"
+            android:fontFamily="@font/dinregular"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.baha.reviewbar.ReviewBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:halfEnable="false"
+            app:halfRangeMax="0.7"
+            app:halfRangeMin="0.2"
+            app:iconSpace="0"
+            app:isIndicator="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button2"
+            app:reviewScore="3"
+            app:reviewScoreMax="5"
+            app:whenDragScoreMin="1.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

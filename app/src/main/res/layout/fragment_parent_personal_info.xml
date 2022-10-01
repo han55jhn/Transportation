@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".auth.fragments.PersonalInfoFragment">
+    tools:context=".auth.fragments.parents.ParentPersonalInfoFragment">
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -127,19 +128,7 @@
                 app:spinnerMode="dropdown" />
 
 
-            <com.tiper.MaterialSpinner
-                android:id="@+id/registration_type_spinner"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/type_tv"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="@dimen/_8sdp"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:layout_marginEnd="@dimen/_8sdp"
-                android:focusable="false"
-                android:hint="@string/registration_type"
-                app:spinnerMode="dropdown" />
+
 
 
 
@@ -239,5 +228,6 @@
 
 
     </ScrollView>
+
 
 </LinearLayout>

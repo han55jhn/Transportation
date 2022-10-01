@@ -1,13 +1,14 @@
-package com.malik.transportation.auth
+package com.malik.transportation.auth.fragments
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
+import android.os.Handler
+import android.os.Looper
 import android.view.View
-import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.Fragment
 import com.malik.transportation.R
 import com.malik.transportation.databinding.FragmentConfirmationBinding
+import com.malik.transportation.home.activity.HomeActivity
 
 
 class ConfirmationFragment : Fragment(R.layout.fragment_confirmation) {
@@ -20,6 +21,10 @@ class ConfirmationFragment : Fragment(R.layout.fragment_confirmation) {
         //viewBinding
         _binding = FragmentConfirmationBinding.bind(view)
 
-
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(requireContext(), HomeActivity::class.java)
+            startActivity(intent)
+            requireActivity().finish()
+        }, 2000)
     }
 }

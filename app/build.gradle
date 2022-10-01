@@ -2,6 +2,8 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id("androidx.navigation.safeargs.kotlin")
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+
 //    id 'com.google.gms.google-services'
 }
 
@@ -62,7 +64,11 @@ dependencies {
 
     //google map
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
-    implementation 'com.google.android.gms:play-services-location:20.0.0'
+    implementation 'com.google.android.gms:play-services-location:19.0.1'
+
+    implementation 'com.github.tiper:MaterialSpinner:1.4.2'
+
+    implementation 'tw.com.oneup.www:reviewbar:1.0.2'
 
 
     def volley_version = '1.2.1'
