@@ -70,6 +70,14 @@ dependencies {
 
     implementation 'tw.com.oneup.www:reviewbar:1.0.2'
 
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")
+
+    //Form Validation
+    implementation 'com.afollestad:vvalidator:0.5.2'
+
 
     def volley_version = '1.2.1'
     implementation "com.android.volley:volley:$volley_version"

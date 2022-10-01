@@ -14,7 +14,7 @@
         android:layout_marginTop="@dimen/_16sdp"
         android:layout_marginEnd="@dimen/_16sdp"
         android:fontFamily="@font/dinregular"
-        android:text="@string/orders"
+        android:text="@string/student_and_teachers_requests"
         android:textColor="@color/purple"
         android:textSize="@dimen/_14ssp" />
 

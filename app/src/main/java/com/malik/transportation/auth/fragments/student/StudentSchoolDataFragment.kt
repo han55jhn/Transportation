@@ -36,11 +36,11 @@ class StudentSchoolDataFragment : Fragment(R.layout.fragment_student_school_data
                 requireActivity().finish()
             }
 
-            schoolStartTimeEt.setOnClickListener{
-                setTime(schoolStartTimeEt)
+            inTimeEt.setOnClickListener{
+                setTime(inTimeEt)
             }
-            schoolEndTimeEt.setOnClickListener{
-                setTime(schoolEndTimeEt)
+            outTimeEt.setOnClickListener{
+                setTime(inTimeEt)
             }
         }
 

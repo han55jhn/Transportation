@@ -57,12 +57,12 @@ class ParentLocationFragment : Fragment(R.layout.fragment_parent_location), OnMa
             childFragmentManager.findFragmentById(R.id.map) as? SupportMapFragment
 
 
-//        binding.apply {
-//            locationBtn.setOnClickListener {
-//                findNavController().navigate(R.id.action_chooseLocationFragment_to_confirmationFragment)
-//
-//            }
-//        }
+        binding.apply {
+            locationBtn.setOnClickListener {
+                findNavController().navigate(R.id.action_parentLocationFragment_to_parentsConfirmationFragment)
+
+            }
+        }
 
 
         // Prompt the user for permission.

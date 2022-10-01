@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parents_home_navigation"
+    app:startDestination="@id/parentsAvailableTripsFragment">
+
+    <fragment
+        android:id="@+id/parentsAvailableTripsFragment"
+        android:name="com.malik.transportation.home.fragments.ParentsAvailableTripsFragment"
+        android:label="fragment_parents_available_trips"
+        tools:layout="@layout/fragment_parents_available_trips" >
+        <action
+            android:id="@+id/action_parentsAvailableTripsFragment_to_childrenFragment"
+            app:destination="@id/childrenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/childrenFragment"
+        android:name="com.malik.transportation.home.fragments.ChildrenFragment"
+        android:label="fragment_children"
+        tools:layout="@layout/fragment_children" >
+        <action
+            android:id="@+id/action_childrenFragment_to_parentsAvailableTripsFragment"
+            app:destination="@id/parentsAvailableTripsFragment" />
+        <action
+            android:id="@+id/action_childrenFragment_to_addChildrenFragment"
+            app:destination="@id/addChildrenFragment" />
+        <action
+            android:id="@+id/action_childrenFragment_to_parentsAgreeFragment"
+            app:destination="@id/parentsAgreeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addChildrenFragment"
+        android:name="com.malik.transportation.home.fragments.AddChildrenFragment"
+        android:label="fragment_add_children"
+        tools:layout="@layout/fragment_add_children" >
+        <action
+            android:id="@+id/action_addChildrenFragment_to_childrenFragment"
+            app:destination="@id/childrenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/parentsAgreeFragment"
+        android:name="com.malik.transportation.home.fragments.ParentsAgreeFragment"
+        android:label="fragment_parents_agree"
+        tools:layout="@layout/fragment_parents_agree" >
+        <action
+            android:id="@+id/action_parentsAgreeFragment_to_childrenFragment"
+            app:destination="@id/childrenFragment" />
+        <action
+            android:id="@+id/action_parentsAgreeFragment_to_parentsConfirmationFragment2"
+            app:destination="@id/parentsConfirmationFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/parentsConfirmationFragment2"
+        android:name="com.malik.transportation.auth.fragments.parents.ParentsConfirmationFragment"
+        android:label="fragment_parents_confirmation"
+        tools:layout="@layout/fragment_parents_confirmation" >
+        <action
+            android:id="@+id/action_parentsConfirmationFragment2_to_parentsAgreeFragment"
+            app:destination="@id/parentsAgreeFragment" />
+    </fragment>
+</navigation>

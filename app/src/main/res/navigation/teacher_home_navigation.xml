@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/teacher_home_navigation"
+    app:startDestination="@id/teacherAvailableTripsFragment">
+    <fragment
+        android:id="@+id/teacherAvailableTripsFragment"
+        android:name="com.malik.transportation.home.fragments.TeacherAvailableTripsFragment"
+        android:label="fragment_teacher_available_trips"
+        tools:layout="@layout/fragment_teacher_available_trips" >
+        <action
+            android:id="@+id/action_teacherAvailableTripsFragment_to_teacherAgreeFragment"
+            app:destination="@id/teacherAgreeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherAgreeFragment"
+        android:name="com.malik.transportation.home.fragments.TeacherAgreeFragment"
+        android:label="fragment_teacher_agree"
+        tools:layout="@layout/fragment_teacher_agree" >
+        <action
+            android:id="@+id/action_teacherAgreeFragment_to_teacherAvailableTripsFragment"
+            app:destination="@id/teacherAvailableTripsFragment" />
+        <action
+            android:id="@+id/action_teacherAgreeFragment_to_teacherTripConfirmationFragment"
+            app:destination="@id/teacherTripConfirmationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherTripConfirmationFragment"
+        android:name="com.malik.transportation.home.fragments.TeacherTripConfirmationFragment"
+        android:label="fragment_teacher_trip_confirmation"
+        tools:layout="@layout/fragment_teacher_trip_confirmation" >
+        <action
+            android:id="@+id/action_teacherTripConfirmationFragment_to_teacherAgreeFragment"
+            app:destination="@id/teacherAgreeFragment" />
+        <action
+            android:id="@+id/action_teacherTripConfirmationFragment_to_teacherAvailableTripsFragment"
+            app:destination="@id/teacherAvailableTripsFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/company_home_navigation"
+    app:startDestination="@id/companyHomeFragment">
+
+    <fragment
+        android:id="@+id/companyHomeFragment"
+        android:name="com.malik.transportation.home.fragments.CompanyHomeFragment"
+        android:label="fragment_company_home"
+        tools:layout="@layout/fragment_company_home" >
+        <action
+            android:id="@+id/action_companyHomeFragment_to_companyDriverInfoFragment2"
+            app:destination="@id/companyDriverInfoFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyDriverInfoFragment2"
+        android:name="com.malik.transportation.auth.fragments.company.CompanyDriverInfoFragment"
+        android:label="fragment_company_driver_info"
+        tools:layout="@layout/fragment_company_driver_info" >
+        <action
+            android:id="@+id/action_companyDriverInfoFragment2_to_companyHomeFragment"
+            app:destination="@id/companyHomeFragment" />
+        <action
+            android:id="@+id/action_companyDriverInfoFragment2_to_companyDriverVehicleInfoFragment2"
+            app:destination="@id/companyDriverVehicleInfoFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyDriverVehicleInfoFragment2"
+        android:name="com.malik.transportation.auth.fragments.company.CompanyDriverVehicleInfoFragment"
+        android:label="fragment_company_driver_vehicle_info"
+        tools:layout="@layout/fragment_company_driver_vehicle_info" >
+        <action
+            android:id="@+id/action_companyDriverVehicleInfoFragment2_to_companyDriverInfoFragment2"
+            app:destination="@id/companyDriverInfoFragment2" />
+        <action
+            android:id="@+id/action_companyDriverVehicleInfoFragment2_to_companyHomeFragment"
+            app:destination="@id/companyHomeFragment" />
+    </fragment>
+</navigation>

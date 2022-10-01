@@ -1,0 +1,16 @@
+package com.malik.transportation.home.activity
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.malik.transportation.databinding.ActivityStudentHomeBinding
+import com.malik.transportation.databinding.ActivityTeacherHomeBinding
+
+class TeacherHomeActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityTeacherHomeBinding
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        //viewBinding
+        binding = ActivityTeacherHomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+    }
+}

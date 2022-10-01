@@ -87,10 +87,10 @@
             android:layout_marginStart="@dimen/_8sdp"
             android:layout_marginTop="@dimen/_8sdp"
             android:layout_marginEnd="@dimen/_8sdp"
-            android:hint="@string/school_start_time">
+            android:hint="@string/in_time">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/school_start_time_et"
+                android:id="@+id/in_time_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dinregular"
@@ -108,10 +108,10 @@
             android:layout_marginStart="@dimen/_8sdp"
             android:layout_marginTop="@dimen/_8sdp"
             android:layout_marginEnd="@dimen/_8sdp"
-            android:hint="@string/school_end_time">
+            android:hint="@string/out_time">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/school_end_time_et"
+                android:id="@+id/out_time_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dinregular"

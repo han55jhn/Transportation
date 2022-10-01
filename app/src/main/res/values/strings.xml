@@ -34,15 +34,65 @@
     <string name="orders">Orders</string>
     <string name="accept">Accept</string>
     <string name="reject">Reject</string>
-    <string name="school_data">School Data</string>
-    <string name="school_name">School Name</string>
+    <string name="school_data">Educational Institution</string>
+    <string name="school_name">Institution Name</string>
     <string name="drivers_requests">Drivers Requests</string>
     <string name="student_requests">Student Requests</string>
     <string name="trip_requests">Trip Requests</string>
+    <string name="vehicle_confirmation">The vehicle has been successfully registered, awaiting admin approval</string>
+    <string name="note">Note: 1000 riyals must be paid in advance when meeting the driver</string>
+    <string name="agree">Agree</string>
+    <string name="uni_student_confirmation">The trip has been successfully registered, pending approval by the driver and educational institution</string>
+    <string name="parents_confirmation">You have been successfully registered, awaiting approval from the administrator and the educational authority</string>
+    <string name="parent_search">Search for the name of the driver or car</string>
+    <string name="children">Children</string>
+    <string name="add_child">Add Child</string>
+    <string name="statements_of_ibn">Statements of Ibn</string>
+    <string name="divine_zodiac">Divine Zodiac</string>
+    <string name="educational_aspect">Educational Aspect</string>
+    <string name="registration">Registration</string>
+    <string name="son_s_info">Son\'s Info</string>
+    <string name="company_name">Company Name</string>
+    <string name="license_number">License Number</string>
+    <string name="company_info">Company Info</string>
+    <string name="driver_info">Driver Info</string>
+    <string name="responsible_driver">Responsible Driver</string>
+    <string name="vehicle_registration">Vehicle Registration</string>
+    <string name="driver_info_confirmation">You have been successfully registered, awaiting admin approval</string>
+    <string name="student_and_teachers_requests">Student And Teachers Requests</string>
+    <string name="add_driver">Add Driver</string>
+    <string name="my_drivers">My Drivers</string>
+    <string name="in_time">In Time</string>
+    <string name="out_time">Out Time</string>
+    <string name="disagree">Disagree</string>
+    <string name="parent_trip_confirmation">The trip has been successfully registered, pending approval by the driver and educational institution</string>
+    <string name="educational_institutions_requests">Educational Institutions Requests</string>
+    <string name="vehicle_requests">Vehicle Requests</string>
+    <string name="students_requests">Students Requests</string>
+    <string name="companies_drivers_request">Companies Drivers Request</string>
+    <string name="seagull">seagull</string>
+    <string name="medina">Medina</string>
+    <string name="university_district">University District</string>
+    <string name="_7_00_am">7:00 AM</string>
+    <string name="_1_00_pm">1:00 PM</string>
+    <string name="honda">Honda</string>
+    <string name="cr_v_2022">CR-V 2022</string>
+    <string name="_83902802030">83902802030</string>
+    <string name="_100">100</string>
+    <string name="institute_name">Institution Name</string>
+    <string name="first_name_entry">خالد</string>
+    <string name="last_name_entry">أحمد</string>
+    <string name="mobile_num_entry">1234656</string>
+    <string name="id_num_entry">SN194564633</string>
+    <string name="driver_lic_num_entry">830124565</string>
+    <string name="student_data">Student Data</string>
+    <string name="student_name">Student Name</string>
+    <string name="company_driver_detail">Company Driver Detail</string>
+    <string name="driver_name">Driver Name</string>
 
 
     <array name="profile_type">
-        <item>Student</item>
+        <item>Institution</item>
         <item>Driver</item>
         <item>Transportation Company</item>
         <item>Parents</item>

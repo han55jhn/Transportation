@@ -34,6 +34,12 @@
         <action
             android:id="@+id/action_registerFragment_to_parentPersonalInfoFragment"
             app:destination="@id/parentPersonalInfoFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_companyInfoFragment"
+            app:destination="@id/companyInfoFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_teacherPersonalInfoFragment"
+            app:destination="@id/teacherPersonalInfoFragment" />
 
     </fragment>
     <fragment
@@ -76,6 +82,12 @@
         <action
             android:id="@+id/action_driverInfoFragment_to_driverVehicleFragment"
             app:destination="@id/driverVehicleFragment" />
+        <action
+            android:id="@+id/action_driverInfoFragment_to_driverInfoConfirmationFragment"
+            app:destination="@id/driverInfoConfirmationFragment" />
+        <argument
+            android:name="type"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/driverVehicleFragment"
@@ -85,6 +97,12 @@
         <action
             android:id="@+id/action_driverVehicleFragment_to_driverInfoFragment"
             app:destination="@id/driverInfoFragment" />
+        <action
+            android:id="@+id/action_driverVehicleFragment_to_vehicleConfirmationFragment"
+            app:destination="@id/vehicleConfirmationFragment" />
+        <action
+            android:id="@+id/action_driverVehicleFragment_to_driverInfoConfirmationFragment"
+            app:destination="@id/driverInfoConfirmationFragment" />
     </fragment>
     <fragment
         android:id="@+id/studentSchoolDataFragment"
@@ -115,5 +133,116 @@
         <action
             android:id="@+id/action_parentLocationFragment_to_parentPersonalInfoFragment"
             app:destination="@id/parentPersonalInfoFragment" />
+        <action
+            android:id="@+id/action_parentLocationFragment_to_parentsConfirmationFragment"
+            app:destination="@id/parentsConfirmationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vehicleConfirmationFragment"
+        android:name="com.malik.transportation.auth.fragments.driver.VehicleConfirmationFragment"
+        android:label="fragment_vehicle_confirmation"
+        tools:layout="@layout/fragment_vehicle_confirmation" >
+        <action
+            android:id="@+id/action_vehicleConfirmationFragment_to_driverVehicleFragment"
+            app:destination="@id/driverVehicleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/parentsConfirmationFragment"
+        android:name="com.malik.transportation.auth.fragments.parents.ParentsConfirmationFragment"
+        android:label="fragment_parents_confirmation"
+        tools:layout="@layout/fragment_parents_confirmation" >
+        <action
+            android:id="@+id/action_parentsConfirmationFragment_to_parentLocationFragment"
+            app:destination="@id/parentLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyInfoFragment"
+        android:name="com.malik.transportation.auth.fragments.company.CompanyInfoFragment"
+        android:label="fragment_company_info"
+        tools:layout="@layout/fragment_company_info" >
+        <action
+            android:id="@+id/action_companyInfoFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_companyInfoFragment_to_companyDriverInfoFragment"
+            app:destination="@id/companyDriverInfoFragment" />
+        <action
+            android:id="@+id/action_companyInfoFragment_to_companyInfoConfirmationFragment"
+            app:destination="@id/companyInfoConfirmationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyDriverInfoFragment"
+        android:name="com.malik.transportation.auth.fragments.company.CompanyDriverInfoFragment"
+        android:label="fragment_company_driver_info"
+        tools:layout="@layout/fragment_company_driver_info" >
+        <action
+            android:id="@+id/action_companyDriverInfoFragment_to_companyInfoFragment"
+            app:destination="@id/companyInfoFragment" />
+        <action
+            android:id="@+id/action_companyDriverInfoFragment_to_companyDriverVehicleInfoFragment"
+            app:destination="@id/companyDriverVehicleInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyDriverVehicleInfoFragment"
+        android:name="com.malik.transportation.auth.fragments.company.CompanyDriverVehicleInfoFragment"
+        android:label="fragment_company_driver_vehicle_info"
+        tools:layout="@layout/fragment_company_driver_vehicle_info" >
+        <action
+            android:id="@+id/action_companyDriverVehicleInfoFragment_to_companyDriverInfoFragment"
+            app:destination="@id/companyDriverInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherPersonalInfoFragment"
+        android:name="com.malik.transportation.auth.fragments.teacher.TeacherPersonalInfoFragment"
+        android:label="fragment_teacher_personal_info"
+        tools:layout="@layout/fragment_teacher_personal_info" >
+        <action
+            android:id="@+id/action_teacherPersonalInfoFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_teacherPersonalInfoFragment_to_teacherLocationFragment"
+            app:destination="@id/teacherLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherLocationFragment"
+        android:name="com.malik.transportation.auth.fragments.teacher.TeacherLocationFragment"
+        android:label="fragment_teacher_location"
+        tools:layout="@layout/fragment_teacher_location" >
+        <action
+            android:id="@+id/action_teacherLocationFragment_to_teacherPersonalInfoFragment"
+            app:destination="@id/teacherPersonalInfoFragment" />
+        <action
+            android:id="@+id/action_teacherLocationFragment_to_teacherConfirmationFragment"
+            app:destination="@id/teacherConfirmationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherConfirmationFragment"
+        android:name="com.malik.transportation.auth.fragments.teacher.TeacherConfirmationFragment"
+        android:label="fragment_teacher_confirmation"
+        tools:layout="@layout/fragment_teacher_confirmation" >
+        <action
+            android:id="@+id/action_teacherConfirmationFragment_to_teacherLocationFragment"
+            app:destination="@id/teacherLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/driverInfoConfirmationFragment"
+        android:name="com.malik.transportation.auth.fragments.driver.DriverInfoConfirmationFragment"
+        android:label="fragment_driver_info_confirmation"
+        tools:layout="@layout/fragment_driver_info_confirmation" >
+        <action
+            android:id="@+id/action_driverInfoConfirmationFragment_to_driverInfoFragment"
+            app:destination="@id/driverInfoFragment" />
+        <action
+            android:id="@+id/action_driverInfoConfirmationFragment_to_driverVehicleFragment"
+            app:destination="@id/driverVehicleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyInfoConfirmationFragment"
+        android:name="com.malik.transportation.auth.fragments.company.CompanyInfoConfirmationFragment"
+        android:label="fragment_company_info_confirmation"
+        tools:layout="@layout/fragment_company_info_confirmation" >
+        <action
+            android:id="@+id/action_companyInfoConfirmationFragment_to_companyInfoFragment"
+            app:destination="@id/companyInfoFragment" />
     </fragment>
 </navigation>

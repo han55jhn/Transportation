@@ -1,11 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_navigation"
     app:startDestination="@id/availableTripsFragment">
 
     <fragment
         android:id="@+id/availableTripsFragment"
         android:name="com.malik.transportation.home.fragments.AvailableTripsFragment"
-        android:label="AvailableTripsFragment" />
+        android:label="AvailableTripsFragment" >
+        <action
+            android:id="@+id/action_availableTripsFragment_to_agreeFragment"
+            app:destination="@id/agreeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/agreeFragment"
+        android:name="com.malik.transportation.home.fragments.AgreeFragment"
+        android:label="fragment_agree"
+        tools:layout="@layout/fragment_agree" >
+        <action
+            android:id="@+id/action_agreeFragment_to_availableTripsFragment"
+            app:destination="@id/availableTripsFragment" />
+        <action
+            android:id="@+id/action_agreeFragment_to_uniStudentConfirmationFragment"
+            app:destination="@id/uniStudentConfirmationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/uniStudentConfirmationFragment"
+        android:name="com.malik.transportation.home.fragments.UniStudentConfirmationFragment"
+        android:label="fragment_uni_student_confirmation"
+        tools:layout="@layout/fragment_uni_student_confirmation" >
+        <action
+            android:id="@+id/action_uniStudentConfirmationFragment_to_agreeFragment"
+            app:destination="@id/agreeFragment" />
+    </fragment>
 </navigation>

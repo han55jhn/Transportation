@@ -4,11 +4,13 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.malik.transportation.R
 import com.malik.transportation.databinding.FragmentRegisterBinding
 import com.tiper.MaterialSpinner
+import java.util.*
 
 
 class RegisterFragment : Fragment(R.layout.fragment_register) {
@@ -38,20 +40,53 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
         binding.apply {
             nextBtn.setOnClickListener {
 
-                if (selectedType == "University Student") {
+                if (selectedType != null) {
 
-                    findNavController().navigate(R.id.action_registerFragment_to_personalInfoFragment)
-                }
-                if (selectedType == "Driver") {
-                    findNavController().navigate(R.id.action_registerFragment_to_driverInfoFragment)
-                }
-                if (selectedType == "Student") {
-                    findNavController().navigate(R.id.action_registerFragment_to_studentSchoolDataFragment)
-                }
-                if (selectedType == "Parents") {
-                    findNavController().navigate(R.id.action_registerFragment_to_parentPersonalInfoFragment)
+
+                    if (selectedType == "University Student") {
+
+
+
+                        findNavController().navigate(R.id.action_registerFragment_to_personalInfoFragment)
+                    }
+                    if (selectedType == "Driver") {
+
+                        val action = RegisterFragmentDirections.actionRegisterFragmentToDriverInfoFragment(
+                            selectedType!!.lowercase(Locale.ROOT),
+
+                        )
+                        findNavController().navigate(action)
+
+                    }
+                    if (selectedType == "Institution") {
+
+                        findNavController().navigate(R.id.action_registerFragment_to_studentSchoolDataFragment)
+                    }
+                    if (selectedType == "Parents") {
+
+                        findNavController().navigate(R.id.action_registerFragment_to_parentPersonalInfoFragment)
+                    }
+                    if (selectedType == "Transportation Company") {
+
+                        //1- verified by the admin after company info
+                        //2- students and teacher list
+                        //3- company driver button
+                        findNavController().navigate(R.id.action_registerFragment_to_companyInfoFragment)
+                    }
+                    if (selectedType == "Teacher") {
+                        //2- Disagree
+
+                        findNavController().navigate(R.id.action_registerFragment_to_teacherPersonalInfoFragment)
+                    }
+                } else {
+                    Toast.makeText(
+                        requireContext(),
+                        "Please select registration type",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
+
 
         }
 

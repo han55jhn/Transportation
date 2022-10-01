@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.home.fragments.studentrequests.StudentsRequestsDetailFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_48sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/dinbold"
+                android:text="@string/student_data"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/_14ssp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/dinregular"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="@string/student_name"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_14ssp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/dinregular"
+                android:text="@string/first_name_entry"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/_14ssp" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/dinregular"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="@string/institute_name"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_14ssp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/dinregular"
+                android:text="@string/seagull"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/_14ssp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/dinregular"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="@string/city"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_14ssp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/dinregular"
+                android:text="@string/medina"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/_14ssp" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/dinregular"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="@string/near_by"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_14ssp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/dinregular"
+                android:text="@string/university_district"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/_14ssp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/dinregular"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="@string/school_start_time"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_14ssp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/dinregular"
+                android:text="@string/_7_00_am"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/_14ssp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/dinregular"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="@string/school_end_time"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_14ssp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/dinregular"
+                android:text="@string/_1_00_pm"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/_14ssp" />
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

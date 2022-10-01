@@ -49,6 +49,7 @@
             android:drawablePadding="@dimen/_8sdp"
             android:fontFamily="@font/dinregular"
             android:text="CR-V 2022"
+            android:visibility="gone"
             android:textColor="@color/purple"
             app:drawableStartCompat="@drawable/car" />
 

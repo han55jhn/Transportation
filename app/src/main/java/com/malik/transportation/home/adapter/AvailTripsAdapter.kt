@@ -15,14 +15,14 @@ import kotlin.collections.ArrayList
 
 class AvailTripsAdapter(
     private val context: Context,
-//    private var mListener: OnItemClickListener,
+    private var mListener: OnItemClickListener,
 //    private val reportArrayList: ArrayList<ReportResponse.Data>,
 ) :
     RecyclerView.Adapter<AvailTripsAdapter.ViewHolder>() {
 
 
     interface OnItemClickListener {
-//        fun onCardClick(position: Int, reportArrayList: ArrayList<ReportResponse.Data>,reportNameRoomList: List<CreateReportRoomResponse>)
+        fun onReservationClick(position: Int)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -50,9 +50,9 @@ class AvailTripsAdapter(
     inner class ViewHolder(private val binding: CustomTripsLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
         init {
-//            binding.deleteBtn.setOnClickListener {
-//                mListener.onDeleteClick(adapterPosition, reportArrayList,reportNameRoomList)
-//            }
+            binding.resBtn.setOnClickListener {
+                mListener.onReservationClick(adapterPosition)
+            }
 
         }
 

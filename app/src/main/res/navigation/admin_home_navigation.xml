@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/admin_home_navigation"
+    app:startDestination="@id/adminHomeFragment">
+
+    <fragment
+        android:id="@+id/adminHomeFragment"
+        android:name="com.malik.transportation.admin.home.fragments.AdminHomeFragment"
+        android:label="fragment_admin_home"
+        tools:layout="@layout/fragment_admin_home" >
+        <action
+            android:id="@+id/action_adminHomeFragment_to_institutionRequestsFragment"
+            app:destination="@id/institutionRequestsFragment" />
+        <action
+            android:id="@+id/action_adminHomeFragment_to_vehicleRequestFragment"
+            app:destination="@id/vehicleRequestFragment" />
+        <action
+            android:id="@+id/action_adminHomeFragment_to_driversRequestsFragment"
+            app:destination="@id/driversRequestsFragment" />
+        <action
+            android:id="@+id/action_adminHomeFragment_to_studentsRequestsFragment"
+            app:destination="@id/studentsRequestsFragment" />
+        <action
+            android:id="@+id/action_adminHomeFragment_to_companyDriversRequestFragment"
+            app:destination="@id/companyDriversRequestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/institutionRequestsFragment"
+        android:name="com.malik.transportation.admin.home.fragments.institution.InstitutionRequestsFragment"
+        android:label="fragment_institution_requests"
+        tools:layout="@layout/fragment_institution_requests" >
+        <action
+            android:id="@+id/action_institutionRequestsFragment_to_adminHomeFragment"
+            app:destination="@id/adminHomeFragment" />
+        <action
+            android:id="@+id/action_institutionRequestsFragment_to_institutionDetailFragment"
+            app:destination="@id/institutionDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/institutionDetailFragment"
+        android:name="com.malik.transportation.admin.home.fragments.institution.InstitutionDetailFragment"
+        android:label="fragment_institution_detail"
+        tools:layout="@layout/fragment_institution_detail" >
+        <action
+            android:id="@+id/action_institutionDetailFragment_to_institutionRequestsFragment"
+            app:destination="@id/institutionRequestsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vehicleRequestFragment"
+        android:name="com.malik.transportation.admin.home.fragments.vehiclerequest.VehicleRequestFragment"
+        android:label="fragment_vehicle_request"
+        tools:layout="@layout/fragment_vehicle_request" >
+        <action
+            android:id="@+id/action_vehicleRequestFragment_to_adminHomeFragment"
+            app:destination="@id/adminHomeFragment" />
+        <action
+            android:id="@+id/action_vehicleRequestFragment_to_vehicleRequestDetailFragment"
+            app:destination="@id/vehicleRequestDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vehicleRequestDetailFragment"
+        android:name="com.malik.transportation.admin.home.fragments.vehiclerequest.VehicleRequestDetailFragment"
+        android:label="fragment_vehicle_request_detail"
+        tools:layout="@layout/fragment_vehicle_request_detail" >
+        <action
+            android:id="@+id/action_vehicleRequestDetailFragment_to_vehicleRequestFragment"
+            app:destination="@id/vehicleRequestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/driversRequestsFragment"
+        android:name="com.malik.transportation.admin.home.fragments.driverrequest.DriversRequestsFragment"
+        android:label="fragment_drivers_requests"
+        tools:layout="@layout/fragment_drivers_requests" >
+        <action
+            android:id="@+id/action_driversRequestsFragment_to_adminHomeFragment"
+            app:destination="@id/adminHomeFragment" />
+        <action
+            android:id="@+id/action_driversRequestsFragment_to_driverRequestDetailFragment"
+            app:destination="@id/driverRequestDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/driverRequestDetailFragment"
+        android:name="com.malik.transportation.admin.home.fragments.driverrequest.DriverRequestDetailFragment"
+        android:label="fragment_driver_request_detail"
+        tools:layout="@layout/fragment_driver_request_detail" >
+        <action
+            android:id="@+id/action_driverRequestDetailFragment_to_driversRequestsFragment"
+            app:destination="@id/driversRequestsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentsRequestsFragment"
+        android:name="com.malik.transportation.admin.home.fragments.studentrequests.StudentsRequestsFragment"
+        android:label="fragment_students_requests"
+        tools:layout="@layout/fragment_students_requests" >
+        <action
+            android:id="@+id/action_studentsRequestsFragment_to_adminHomeFragment"
+            app:destination="@id/adminHomeFragment" />
+        <action
+            android:id="@+id/action_studentsRequestsFragment_to_studentsRequestsDetailFragment"
+            app:destination="@id/studentsRequestsDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentsRequestsDetailFragment"
+        android:name="com.malik.transportation.admin.home.fragments.studentrequests.StudentsRequestsDetailFragment"
+        android:label="fragment_students_requests_detail"
+        tools:layout="@layout/fragment_students_requests_detail" >
+        <action
+            android:id="@+id/action_studentsRequestsDetailFragment_to_studentsRequestsFragment"
+            app:destination="@id/studentsRequestsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyDriverRequestDetailFragment"
+        android:name="com.malik.transportation.admin.home.fragments.companydriverrequest.CompanyDriverRequestDetailFragment"
+        android:label="fragment_company_driver_request_detail"
+        tools:layout="@layout/fragment_company_driver_request_detail" >
+        <action
+            android:id="@+id/action_companyDriverRequestDetailFragment_to_companyDriversRequestFragment"
+            app:destination="@id/companyDriversRequestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyDriversRequestFragment"
+        android:name="com.malik.transportation.admin.home.fragments.companydriverrequest.CompanyDriversRequestFragment"
+        android:label="fragment_company_drivers_request"
+        tools:layout="@layout/fragment_company_drivers_request" >
+        <action
+            android:id="@+id/action_companyDriversRequestFragment_to_adminHomeFragment"
+            app:destination="@id/adminHomeFragment" />
+        <action
+            android:id="@+id/action_companyDriversRequestFragment_to_companyDriverRequestDetailFragment"
+            app:destination="@id/companyDriverRequestDetailFragment" />
+    </fragment>
+</navigation>
